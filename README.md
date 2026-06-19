@@ -9,9 +9,10 @@
 
 | Resource              | Link                  |
 | --------------------- | --------------------- |
-| 🚀 Live Demo          | [Add Deployment Link] |
-| 🎥 Demo Video         | [Add Demo Video Link] |
-| 📊 Presentation (PPT) | [Add PPT Link]        |
+| 🚀 Live Demo          | https://sahithirithvika-forgemind-ai-industrial-intelligence-app-xxxx.streamlit.app |
+| 🎥 Demo Video         | https://drive.google.com/file/d/1jNz-bE_ieMWNWcXRPYZp_JH1s0fDf2gA/view?usp=sharing |
+| 📊 Presentation (PPT) | https://drive.google.com/file/d/1QWKnbLyhb1Y3wDlxHqAYkKZhyskBzBKX/view?usp=sharing     |
+| drive link            |https://drive.google.com/drive/folders/1vA5NphjBqNW6HphrO5ix6wKoz5CqyJZ6?usp=sharing |
 
 
 ---
