@@ -1,162 +1,285 @@
 # ⚙️ ForgeMind AI – Autonomous Industrial Intelligence Platform
 
-> **Edge AI for Connected, Secure & Intelligent Industrial Systems**  
+> **Edge AI for Connected, Secure & Intelligent Industrial Systems**
 > Predictive Maintenance · Anomaly Detection · Real-Time Fleet Monitoring
 
-# Team Members
-1. Sai Spoorthy Eturu
-2. Sahithi Rithvika Katakam
+---
+
+## 🔗 Project Resources
+
+| Resource              | Link                  |
+| --------------------- | --------------------- |
+| 🚀 Live Demo          | [Add Deployment Link] |
+| 🎥 Demo Video         | [Add Demo Video Link] |
+| 📊 Presentation (PPT) | [Add PPT Link]        |
+
+
+---
+
+## 📸 Dashboard Preview
+
+![ForgeMind Dashboard](images/dashboard.png)
+
 ---
 
 ## 📋 Project Overview
 
-ForgeMind AI is a lightweight but production-realistic Proof of Concept (PoC) for an **Edge AI-based industrial monitoring platform**.  
-It simulates a fleet of heavy industrial machines, runs an AI pipeline for anomaly detection and health scoring, and presents everything in a professional Streamlit dashboard — suitable for a Tata Technologies hackathon demo.
+ForgeMind AI is a lightweight yet production-oriented **Edge AI Industrial Monitoring Platform** designed to demonstrate how artificial intelligence can improve operational efficiency, machine reliability, and predictive maintenance in modern industrial environments.
+
+The platform simulates a fleet of industrial machines, analyzes sensor telemetry using machine learning, detects anomalies in real time, predicts equipment health degradation, and generates actionable maintenance recommendations through an interactive dashboard.
+
+Built as a Proof of Concept (PoC), ForgeMind AI showcases the future of intelligent manufacturing and Industry 4.0 systems.
 
 ---
 
-## 🏗️ Project Structure
+## ✨ Key Features
 
+* 🔍 AI-Powered Anomaly Detection using Isolation Forest
+* 📊 Real-Time Fleet Monitoring Dashboard
+* ⚠️ Predictive Failure Probability Estimation
+* 🏥 Machine Health Scoring (0–100)
+* 🛠️ Automated Maintenance Recommendations
+* 📈 Interactive Data Analytics & Visualizations
+* 📄 Downloadable Fleet Reports
+* 🌐 Edge AI Inspired Industrial Architecture
+
+---
+
+## 🏗️ System Architecture
+
+```text
+Industrial Machines
+        │
+        ▼
+Synthetic Sensor Data Generator
+        │
+        ▼
+Anomaly Detection Engine
+(Isolation Forest)
+        │
+        ▼
+Risk Scoring Engine
+        │
+        ▼
+Maintenance Recommendation Engine
+        │
+        ▼
+Interactive Streamlit Dashboard
 ```
+
+---
+
+## 🤖 AI Processing Pipeline
+
+```text
+Raw Sensor Data (1,200 Records | 20 Machines)
+                │
+                ▼
+      Isolation Forest
+      (Anomaly Detection)
+                │
+                ▼
+     Risk Scoring Engine
+                │
+                ▼
+ Failure Probability Estimation
+                │
+                ▼
+Maintenance Recommendation Engine
+                │
+                ▼
+      Streamlit Dashboard
+```
+
+### AI Outputs
+
+| Component          | Output                         |
+| ------------------ | ------------------------------ |
+| Anomaly Detection  | anomaly_score, is_anomaly      |
+| Risk Scoring       | health_score, risk_level       |
+| Prediction         | failure_probability            |
+| Maintenance Engine | alert_priority, recommendation |
+
+---
+
+## 🛠️ Tech Stack
+
+| Category             | Technologies                 |
+| -------------------- | ---------------------------- |
+| Frontend             | Streamlit                    |
+| Programming Language | Python                       |
+| Data Processing      | Pandas, NumPy                |
+| Machine Learning     | Scikit-Learn                 |
+| Visualization        | Plotly                       |
+| Reporting            | FPDF2                        |
+| Data Generation      | Custom Synthetic Data Engine |
+
+---
+
+## 📂 Project Structure
+
+```text
 ForgeMind-AI/
-├── app.py                        # Main Streamlit dashboard
-├── requirements.txt              # Python dependencies
-├── README.md                     # This file
+├── app.py
+├── requirements.txt
+├── README.md
 │
 ├── data/
 │   ├── __init__.py
-│   └── generate_data.py          # Synthetic sensor data generator (1 200 records)
+│   └── generate_data.py
 │
 └── engine/
     ├── __init__.py
-    ├── anomaly_detection.py      # Isolation Forest anomaly detection
-    ├── risk_scoring.py           # Machine health score (0–100) + risk levels
-    └── maintenance_engine.py     # Recommendation rules + maintenance history sim
+    ├── anomaly_detection.py
+    ├── risk_scoring.py
+    └── maintenance_engine.py
 ```
 
 ---
 
 ## 🚀 Quick Start
 
-### 1. Prerequisites
-- Python 3.9 or higher  
-- pip
+### 1. Clone Repository
 
-### 2. Install dependencies
+```bash
+git clone <repository-url>
+cd ForgeMind-AI
+```
+
+### 2. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the dashboard
+### 3. Run Application
+
 ```bash
 streamlit run app.py
 ```
 
-The app opens automatically at **http://localhost:8501**
+Application launches at:
 
----
-
-## 🤖 AI Pipeline
-
-```
-Raw Sensor Data (1 200 records, 20 machines)
-        │
-        ▼
-Isolation Forest (Anomaly Detection)
-  → anomaly_score, is_anomaly
-        │
-        ▼
-Risk Scoring Engine
-  → health_score (0–100), risk_level (Low/Medium/High), failure_prob (%)
-        │
-        ▼
-Maintenance Recommendation Engine
-  → alert_priority (CRITICAL/HIGH/MEDIUM/LOW/INFO)
-  → recommendation text
-        │
-        ▼
-Streamlit Dashboard
+```text
+http://localhost:8501
 ```
 
 ---
 
-## 📊 Dashboard Tabs
+## 📊 Dashboard Modules
 
-| Tab | Contents |
-|-----|----------|
-| **📊 Monitoring** | Real-time machine table with colour-coded health scores and risk levels |
-| **📈 Analytics** | Temperature & vibration trends, health distribution, risk pie chart, scatter plot, power bar chart |
-| **🚨 Alerts** | Prioritised alert panel with maintenance recommendations |
-| **🔩 Machine Detail** | Health gauge, sensor metrics, 4-panel time series, maintenance history log |
-| **📄 Report** | Fleet summary stats, alert breakdown, CSV export |
+### 📊 Monitoring
 
----
+* Live machine status monitoring
+* Health score visualization
+* Risk level classification
+* Anomaly indicators
 
-## 🔧 Simulated Machine Types
+### 📈 Analytics
 
-| Machine | Temp Range | Vibration | Pressure | Power |
-|---------|-----------|-----------|----------|-------|
-| CNC Milling Machine | 55–75 °C | 0.5–2.0 | 4–6 bar | 15–30 kW |
-| Hydraulic Press | 60–85 °C | 1.0–3.5 | 10–18 bar | 30–55 kW |
-| Industrial Compressor | 70–95 °C | 1.5–4.0 | 8–14 bar | 40–70 kW |
-| Conveyor Drive Motor | 45–65 °C | 0.3–1.5 | 2–4 bar | 8–20 kW |
-| Injection Moulding Unit | 80–110 °C | 0.8–2.5 | 12–20 bar | 50–80 kW |
+* Temperature trend analysis
+* Vibration monitoring
+* Risk distribution charts
+* Power consumption analytics
+* Machine performance insights
 
----
+### 🚨 Alerts
 
-## ⚠️ Fault Injection
+* Prioritized maintenance alerts
+* Critical issue identification
+* Automated recommendations
 
-~15% of machines have a fault injected into the last 20% of their sensor timeline:
+### 🔩 Machine Detail
 
-| Fault | Effect |
-|-------|--------|
-| `overheating` | Temperature +20–45 °C, Power +10–25 kW |
-| `bearing_wear` | Vibration +3–6, Temperature +5–15 °C |
-| `pressure_leak` | Pressure −2–5 bar, Vibration +1–3 |
-| `power_surge` | Power +20–40 kW, Temperature +10–20 °C |
+* Health gauge visualization
+* Sensor performance metrics
+* Time-series analysis
+* Maintenance history tracking
 
----
+### 📄 Reports
 
-## 📦 Dependencies
-
-```
-streamlit==1.35.0
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.5.0
-plotly==5.22.0
-fpdf2==2.7.9
-```
+* Fleet health summary
+* Alert breakdown statistics
+* CSV export functionality
 
 ---
 
-## 🎯 Dashboard Screenshot Description
+## 🔧 Simulated Industrial Assets
 
-**Header:** Dark (#0d1117) background, blue accent title "⚙️ ForgeMind AI"
-
-**Sidebar:** Machine type / risk filters, anomaly sensitivity slider, re-run AI button
-
-**KPI Row:** 5 gradient cards — Total Machines (blue), Healthy (green), At Risk (amber), Active Alerts (orange), Critical (red)
-
-**Monitoring Tab:** Dark-themed dataframe with colour-coded risk and health columns
-
-**Analytics Tab:** 6 interactive Plotly charts in a dark theme (line, histogram, donut, scatter, bar)
-
-**Alerts Tab:** Colour-coded alert cards (red=CRITICAL, orange=HIGH, yellow=MEDIUM, green=LOW)
-
-**Machine Detail Tab:** Plotly gauge with green/amber/red zones, st.metric sensor cards, 4-panel sensor time series with anomaly markers (red ✕), simulated maintenance history table
-
-**Report Tab:** Download CSV button (blue gradient), summary statistics table, alert breakdown
+| Machine Type            | Temperature | Vibration | Pressure  | Power    |
+| ----------------------- | ----------- | --------- | --------- | -------- |
+| CNC Milling Machine     | 55–75°C     | 0.5–2.0   | 4–6 bar   | 15–30 kW |
+| Hydraulic Press         | 60–85°C     | 1.0–3.5   | 10–18 bar | 30–55 kW |
+| Industrial Compressor   | 70–95°C     | 1.5–4.0   | 8–14 bar  | 40–70 kW |
+| Conveyor Drive Motor    | 45–65°C     | 0.3–1.5   | 2–4 bar   | 8–20 kW  |
+| Injection Moulding Unit | 80–110°C    | 0.8–2.5   | 12–20 bar | 50–80 kW |
 
 ---
 
-## 💡 Bonus Features Included
+## ⚠️ Fault Injection Simulation
 
-- ✅ Machine Health Gauge (Plotly Indicator)
-- ✅ Predictive Failure Probability (%)
-- ✅ Download Report Button (CSV)
-- ✅ Maintenance History Simulation
+Approximately **15% of machines** receive simulated faults to emulate real-world industrial failures.
+
+| Fault Type    | Simulated Impact           |
+| ------------- | -------------------------- |
+| Overheating   | Temperature ↑, Power ↑     |
+| Bearing Wear  | Vibration ↑, Temperature ↑ |
+| Pressure Leak | Pressure ↓, Vibration ↑    |
+| Power Surge   | Power ↑, Temperature ↑     |
 
 ---
 
-*Built for Tata Technologies Hackathon · ForgeMind AI v1.0.0 · © 2026*
+## 📈 Performance Metrics
+
+* 20 Simulated Industrial Machines
+* 1,200 Sensor Records
+* Multi-Sensor Monitoring
+* Real-Time Risk Assessment
+* Predictive Failure Estimation
+* Automated Maintenance Insights
+
+---
+
+## 🎯 Industrial Impact
+
+ForgeMind AI enables industries to transition from reactive maintenance to predictive maintenance by:
+
+* Reducing unexpected machine downtime
+* Improving equipment lifespan
+* Lowering operational maintenance costs
+* Enhancing workplace safety
+* Increasing manufacturing efficiency
+* Supporting data-driven decision making
+
+---
+
+## 🚀 Future Roadmap
+
+* IoT Sensor Integration
+* Real-Time MQTT Streaming
+* Edge Deployment on NVIDIA Jetson
+* Digital Twin Simulation
+* LLM-Based Maintenance Assistant
+* Remaining Useful Life (RUL) Prediction
+* Enterprise Fleet Management Features
+
+---
+
+## 👥 Team Members
+
+### Team ForgeMind
+
+1. **Sahithi Rithvika Katakam**
+2. **Sai Spoorthy Eturu**
+
+---
+
+## 📜 License
+
+This project is developed for educational, research, and hackathon demonstration purposes.
+
+---
+
+**Built for Tata Technologies Hackathon 2026**
+**ForgeMind AI v1.0.0**
+
