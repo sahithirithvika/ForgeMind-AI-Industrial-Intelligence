@@ -19,7 +19,8 @@
 
 ## 📸 Dashboard Preview
 
-![ForgeMind Dashboard](images/dashboard.png)
+<img width="911" height="370" alt="image" src="https://github.com/user-attachments/assets/ea255dbc-78b3-4b1a-8a2b-3dcd5bdb5d2f" />
+
 
 ---
 
