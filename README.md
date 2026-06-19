@@ -2,7 +2,8 @@
 
 > **Edge AI for Connected, Secure & Intelligent Industrial Systems**  
 > Predictive Maintenance · Anomaly Detection · Real-Time Fleet Monitoring
-> Team Members:
+
+# Team Members
 1. Sai Spoorthy Eturu
 2. Sahithi Rithvika Katakam
 ---
